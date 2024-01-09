@@ -1,7 +1,6 @@
 {
   "name": "plakart/contao-plakart-connector-bundle",
   "type": "contao-bundle",
-  "version": "dev-master",
   "description": "Interne API-Verbindung zur Verwaltung von verschiedenen Contao-Installationen.",
   "authors": [
     {
