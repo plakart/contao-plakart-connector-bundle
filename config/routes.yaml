@@ -1,0 +1,3 @@
+plakart_connector:
+  resource: "../src/Controller"
+  type: annotation

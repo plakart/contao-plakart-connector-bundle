@@ -1,0 +1,24 @@
+<div class="content" style="border:0;">
+    <div id="tl_soverview">
+        <div id="tl_messages">
+            <h2>Generator</h2>
+            <p>Hier kann ein Token generiert werden. Anschließend muss dieses in das jeweilige Element im Webpages-Tool hinterlegt werden.</p>
+            <?php if($this->tokenExists): ?>
+                <p style="color:green;">>> Token existiert bereits.</p>
+            <?php else: ?>
+                <?php if($this->generatedToken): ?>
+                    <h3>Token erfolgreich generiert</h3>
+                    <p>Das Token wird nur einmal angezeigt. Bitte jetzt kopieren und in das Webpages-Tool eintragen.</p>
+                    <p style="color:green;display:inline-block;padding:5px 10px;border:1px solid;"><?= $this->generatedToken ?></p>
+                <?php else: ?>
+                    <p style="color:cornflowerblue;">>> Kein Token vorhanden.</p>
+                    <form action="<?= $this->request ?>" method="post" enctype="application/x-www-form-urlencoded">
+                        <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>"/>
+                        <input type="hidden" name="FORM_SUBMIT" value="generateToken" />
+                        <button type="submit" style="padding:5px 10px;">Token generieren</button>
+                    </form>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

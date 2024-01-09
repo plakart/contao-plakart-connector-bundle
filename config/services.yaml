@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autoconfigure: true
+
+  Plakart\ContaoPlakartConnectorBundle\Controller\GetInfosController:
+    tags:
+      - "terminal42_service_annotation"
+      - "controller.service_arguments"
+    calls:
+      - [ setContainer, [ "@service_container" ] ]
+    public: true
