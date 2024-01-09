@@ -2,6 +2,8 @@
   "name": "plakart/contao-plakart-connector-bundle",
   "type": "contao-bundle",
   "description": "Interne API-Verbindung zur Verwaltung von verschiedenen Contao-Installationen.",
+  "homepage": "https://plakart.de",
+  "license": "MIT License",
   "authors": [
     {
       "name": "Agentur plakart",
