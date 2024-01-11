@@ -1,2 +1,3 @@
 parameters:
-  plakart_connector.token: '%env(PLAKART_CONNECTOR_TOKEN)%'
+  env(PLAKART_CONNECTOR_TOKEN): ''
+  plakart_connector.token: '%env(resolve:PLAKART_CONNECTOR_TOKEN)%'
